@@ -20,7 +20,7 @@ const App = () => (
         <div className="mx-auto grid max-w-(--breakpoint-xl) px-4 py-8 text-center lg:py-16">
           <div className="mx-auto place-self-center">
             <h1 className="mb-4 max-w-4xl text-4xl leading-none font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white">
-              Vite Enterprise Boilerplate
+              IMH Invoice numbers list
             </h1>
             <p className="mb-6 max-w-4xl font-light text-gray-500 md:text-lg lg:mb-8 lg:text-xl dark:text-gray-400">
               This webpage is to generate the IMH invnos list previously created
