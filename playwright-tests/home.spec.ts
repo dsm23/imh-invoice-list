@@ -4,7 +4,7 @@ import { expect, test } from "@playwright/test";
 test("has title", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle(/Vite \+ React \+ TS/);
+  await expect(page).toHaveTitle(/IMH Invoices list/);
 });
 
 test("has heading", async ({ page }) => {
@@ -12,7 +12,7 @@ test("has heading", async ({ page }) => {
 
   await expect(
     page.getByRole("heading", {
-      name: "Vite Enterprise Boilerplate",
+      name: "IMH Invoice numbers list",
     }),
   ).toBeVisible();
 });
