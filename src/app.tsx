@@ -453,13 +453,13 @@ const App = () => (
             </p>
 
             <a
-              href="https://github.com/dsm23/dsm23-vite-spa-template"
+              href="https://github.com/dsm23/imh-invoice-list"
               className={buttonVariants({ size: "lg", className: "mr-3" })}
             >
               Get started
             </a>
             <a
-              href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-vite-spa-template/"
+              href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/imh-invoice-list/"
               className={buttonVariants({ variant: "outline", size: "lg" })}
             >
               Deploy Now
