@@ -6,7 +6,7 @@ import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import type { VariantProps } from "class-variance-authority";
 import { cn } from "~/utils/class-names";
 import { isFunction } from "~/utils/is-type";
-import buttonVariants from "./buttonVariants";
+import buttonVariants from "./variants";
 
 const Button: FunctionComponent<
   ButtonPrimitive.Props & VariantProps<typeof buttonVariants>
