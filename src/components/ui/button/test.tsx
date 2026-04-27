@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { screen } from "@testing-library/react";
 import { render } from "~/test-utils/render";
 import { Button } from ".";
-import buttonVariants from "./buttonVariants";
+import buttonVariants from "./variants";
 
 describe("component", () => {
   describe("Button", () => {

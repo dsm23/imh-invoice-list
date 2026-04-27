@@ -1,13 +1,13 @@
 import { Laptop, Moon, Sun } from "lucide-react";
-import { Button } from "~/components/button";
+import { useTheme } from "~/components/theme-provider";
+import { Button } from "~/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "~/components/dropdown-menu";
-import { useTheme } from "~/components/theme-provider";
+} from "~/components/ui/dropdown-menu";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
