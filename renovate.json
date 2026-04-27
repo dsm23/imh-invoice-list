@@ -1,0 +1,74 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "group:jsUnitTest",
+    "group:vite",
+    "helpers:pinGitHubActionDigestsToSemver",
+    "security:openssf-scorecard",
+    ":approveMajorUpdates",
+    ":enableVulnerabilityAlerts",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)unit-testing.yml$/"],
+      "depNameTemplate": "dawidd6/action-download-artifact",
+      "datasourceTemplate": "github-releases",
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+uses\\:\\s*dawidd6\\/action-download-artifact@(?<currentDigest>[A-Za-z0-9]*)\\s+#\\s+(?<currentValue>.+?)\\s+"
+      ]
+    }
+  ],
+  "registryAliases": {
+    "dhi.io": "dhi.io"
+  },
+  "hostRules": [
+    {
+      "matchHost": "dhi.io",
+      "hostType": "docker",
+      "username": "{{ secrets.MEND_DOCKER_HUB_USERNAME }}",
+      "password": "{{ secrets.MEND_DOCKER_HUB_PASSWORD }}"
+    }
+  ],
+  "ignoreDeps": ["ghcr.io/dsm23/dsm23-vite-spa-template"],
+  "packageRules": [
+    {
+      "description": "Apply minimum release age to all relevant datasources with timestamps",
+      "internalChecksFilter": "strict",
+      "matchDatasources": [
+        "github-releases",
+        "github-tags",
+        "node-version",
+        "npm"
+      ],
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Apply minimum release age to docker datasource regardless of timestamps",
+      "internalChecksFilter": "strict",
+      "matchDatasources": ["docker"],
+      "minimumReleaseAge": "3 days",
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
+    },
+    {
+      "extends": ["packages:react"],
+      "groupName": "react packages"
+    },
+    {
+      "extends": ["packages:stylelint"],
+      "groupName": "stylelint packages"
+    },
+    {
+      "groupName": "playwright monorepo",
+      "matchPackageNames": [
+        "playwright",
+        "@playwright/test",
+        "mcr.microsoft.com/playwright"
+      ]
+    }
+  ],
+  "rebaseWhen": "conflicted",
+  "osvVulnerabilityAlerts": true
+}

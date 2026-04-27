@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "editorconfig.editorconfig",
+    "jasonnutter.vscode-codeowners",
+    "joshbolduc.commitlint",
+    "ms-azuretools.vscode-containers",
+    "ms-playwright.playwright",
+    "oxc.oxc-vscode",
+    "stylelint.vscode-stylelint",
+    "unifiedjs.vscode-mdx"
+  ],
+  "unwantedRecommendations": []
+}

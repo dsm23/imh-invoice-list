@@ -1,0 +1,11 @@
+# Dist Folder
+dist
+
+# Public Folder
+public
+
+# Vitest
+coverage
+
+# Storybook
+storybook-static
