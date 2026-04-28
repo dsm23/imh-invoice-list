@@ -41,8 +41,8 @@ const formSchema = z.object({
     .min(300, "We have already done at least 300 proformas"),
   noInvoices: z
     .number()
-    .min(20, "This is an A4 piece of paper")
-    .max(28, "This is a single A4 piece of paper"),
+    .min(15, "This is an A4 piece of paper")
+    .max(30, "This is a single A4 piece of paper"),
   noReturns: z
     .number()
     .min(1, "This is an A4 piece of paper")
@@ -56,7 +56,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      noInvoices: 28,
+      noInvoices: 30,
       noReturns: 4,
     },
   });
@@ -93,7 +93,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         {...field}
                         id="staring-invoices"
                         type="number"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         placeholder="05700"
                         aria-invalid={fieldState.invalid}
                         required
@@ -117,7 +117,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         {...field}
                         id="starting-delivery-notes"
                         type="number"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         placeholder="06500"
                         aria-invalid={fieldState.invalid}
                         required
@@ -138,7 +138,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         {...field}
                         id="number-invoices"
                         type="number"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         aria-invalid={fieldState.invalid}
                         required
                       />
@@ -162,7 +162,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         id="starting-dranetz-returns"
                         type="number"
                         placeholder="R0310"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         aria-invalid={fieldState.invalid}
                         required
                       />
@@ -187,7 +187,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         id="starting-credit-notes"
                         type="number"
                         placeholder="C0100"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         aria-invalid={fieldState.invalid}
                         required
                       />
@@ -212,7 +212,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         id="starting-proforma"
                         type="number"
                         placeholder="P00305"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         aria-invalid={fieldState.invalid}
                         required
                       />
@@ -232,7 +232,7 @@ const FormInvnos: FunctionComponent<Props> = ({ children }) => {
                         {...field}
                         id="number-returns"
                         type="number"
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        onChange={(e) => field.onChange(e.target.valueAsNumber)}
                         aria-invalid={fieldState.invalid}
                         required
                       />
