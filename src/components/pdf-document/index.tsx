@@ -1,10 +1,17 @@
 import type { FunctionComponent } from "react";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+import {
+  Document,
+  Page,
+  Link,
+  Text,
+  View,
+  StyleSheet,
+} from "@react-pdf/renderer";
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
-    padding: 30,
+    padding: 20,
     fontSize: 10,
     fontFamily: "Helvetica",
   },
@@ -19,6 +26,21 @@ const styles = StyleSheet.create({
     textDecoration: "underline",
     fontWeight: 700,
     fontSize: 12,
+  },
+
+  footer: {
+    position: "absolute",
+    bottom: 20,
+    left: 20,
+    right: 20,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  link: {
+    textDecoration: "underline",
+    fontSize: 10,
   },
 
   bottomTableColumnHeading: {
@@ -64,7 +86,7 @@ const OutputDocument: FunctionComponent<Props> = ({
   startingDranetzReturns = 306,
   startingCreditNotes = 84,
   startingProforma = 302,
-  noInvoices = 28,
+  noInvoices = 30,
   noReturns = 4,
 }) => {
   const list = Array.from({ length: noInvoices }, (_, i) => i);
@@ -129,6 +151,12 @@ const OutputDocument: FunctionComponent<Props> = ({
             </Text>
           </View>
         ))}
+
+        <View style={styles.footer} fixed>
+          <Link src={window.location.origin} style={styles.link}>
+            {window.location.origin}
+          </Link>
+        </View>
       </Page>
     </Document>
   );
