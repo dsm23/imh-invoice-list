@@ -61,17 +61,11 @@
       "groupName": "stylelint packages"
     },
     {
-      "groupName": "pnpm packages",
-      "matchPackageNames": ["ghcr.io/pnpm/pnpm", "pnpm"],
-      "packageOverrides": [
-        {
-          "matchPackageNames": ["ghcr.io/pnpm/pnpm"],
-          "datasource": "github-releases",
-          "packageName": "pnpm/pnpm"
-        }
-      ],
-      "minimumReleaseAge": "3 days",
-      "internalChecksFilter": "strict"
+      "description": "Force pnpm Docker to use GitHub timestamps",
+      "matchPackageNames": ["ghcr.io/pnpm/pnpm"],
+      "matchDatasources": ["docker"],
+      "overrideDatasource": "github-releases",
+      "overridePackageName": "pnpm/pnpm"
     },
     {
       "groupName": "playwright monorepo",
@@ -79,16 +73,14 @@
         "playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
-      ],
-      "packageOverrides": [
-        {
-          "matchPackageNames": ["mcr.microsoft.com/playwright"],
-          "datasource": "github-releases",
-          "packageName": "microsoft/playwright"
-        }
-      ],
-      "minimumReleaseAge": "3 days",
-      "internalChecksFilter": "strict"
+      ]
+    },
+    {
+      "description": "Force Playwright Docker to use GitHub timestamps",
+      "matchPackageNames": ["mcr.microsoft.com/playwright"],
+      "matchDatasources": ["docker"],
+      "overrideDatasource": "github-releases",
+      "overridePackageName": "microsoft/playwright"
     }
   ],
   "rebaseWhen": "conflicted",
