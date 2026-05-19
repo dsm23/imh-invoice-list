@@ -70,10 +70,9 @@ const fieldVariants = cva(
 );
 
 const Field: FunctionComponent<
-  ComponentProps<"div"> & VariantProps<typeof fieldVariants>
+  ComponentProps<"fieldset"> & VariantProps<typeof fieldVariants>
 > = ({ className, orientation = "vertical", ...props }) => (
-  <div
-    role="group"
+  <fieldset
     data-slot="field"
     data-orientation={orientation}
     className={cn(fieldVariants({ orientation }), className)}
