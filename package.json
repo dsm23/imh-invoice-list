@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.12.1",
-    "@changesets/cli": "2.31.0",
+    "@changesets/cli": "2.31.1",
     "@chromatic-com/storybook": "5.2.1",
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
@@ -62,7 +62,7 @@
     "eslint-plugin-better-tailwindcss": "4.6.1",
     "eslint-plugin-storybook": "10.5.0",
     "jsdom": "29.1.1",
-    "knip": "6.26.0",
+    "knip": "6.27.0",
     "lefthook": "2.1.10",
     "npm-run-all2": "9.0.2",
     "oxfmt": "0.59.0",
@@ -82,5 +82,5 @@
   "engines": {
     "node": ">=26.0.0"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@11.13.1"
 }
