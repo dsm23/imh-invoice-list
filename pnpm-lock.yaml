@@ -15,8 +15,8 @@ importers:
         specifier: 5.3.0
         version: 5.3.0
       '@hookform/resolvers':
-        specifier: 5.4.2
-        version: 5.4.2(@standard-schema/spec@1.1.0)(ajv-formats@2.1.1(ajv@8.20.0))(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(valibot@1.4.2(typescript@6.0.3))(zod@4.4.3)
+        specifier: 5.5.1
+        version: 5.5.1(@standard-schema/spec@1.1.0)(ajv-formats@2.1.1(ajv@8.20.0))(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(valibot@1.4.2(typescript@6.0.3))(zod@4.4.3)
       '@react-pdf/renderer':
         specifier: 4.5.1
         version: 4.5.1(react@19.2.8)
@@ -27,8 +27,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: 1.26.0
-        version: 1.26.0(react@19.2.8)
+        specifier: 1.27.0
+        version: 1.27.0(react@19.2.8)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -39,8 +39,8 @@ importers:
         specifier: 7.83.0
         version: 7.83.0(react@19.2.8)
       shadcn:
-        specifier: 4.14.1
-        version: 4.14.1(supports-color@10.2.2)(typescript@6.0.3)
+        specifier: 4.15.0
+        version: 4.15.0(supports-color@10.2.2)(typescript@6.0.3)
       tailwind-merge:
         specifier: 3.6.0
         version: 3.6.0
@@ -840,8 +840,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hookform/resolvers@5.4.2':
-    resolution: {integrity: sha512-aPct0xA24dh2qGLHRzBuCqjI3fZf4qiEdgUBTt9z6TVqgpVoP4K7Aq2j17wnY6p/QPD8fQlh5+4Vd3nwSeOn9Q==}
+  '@hookform/resolvers@5.5.1':
+    resolution: {integrity: sha512-OjJoswUdmOSKTojFaSLjxHyORcbNbHsmxhFNWeVHWEGVYctQaUXOqEr7GkMKEJu8yGCRvnjueAPmsY8oSBYjKw==}
     peerDependencies:
       '@sinclair/typebox': '>=0.25.24'
       '@standard-schema/spec': ^1.0.0
@@ -3651,8 +3651,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@1.26.0:
-    resolution: {integrity: sha512-raglYVR2+VkMfJL158krjVmE+rV5ST2lzA/KQm1FRSjMHT4MnWaegHxoVEpmc2So3nOEhp9oGejJwAPX8MoAjg==}
+  lucide-react@1.27.0:
+    resolution: {integrity: sha512-rJicGl/3Fly/E0rOH1YmPZ6e49JCnKknh1ox1vpHnkfjujAkKA6sqUZvH3MTAaXXjgexyUwgNwTJzTtYuAFYJw==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -4260,8 +4260,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn@4.14.1:
-    resolution: {integrity: sha512-Xb4r150oGNexMBxUnWPG1emcaUlFbhzMOJubdA+k0NTkmhgBBycFZjTz9Aw2yQbpDR6QnIZbk234N20s/s7s9A==}
+  shadcn@4.15.0:
+    resolution: {integrity: sha512-fFTpfOuRwqjpXGp/sKpAxJkjdgv1jf8bDrW1xi0cVn2k7WJ5ijV/gjkAlkAidGDjhEkgcUuxVdm4oRB9r8BivA==}
     engines: {node: '>=20.18.1'}
     hasBin: true
 
@@ -5685,7 +5685,7 @@ snapshots:
     dependencies:
       hono: 4.12.29
 
-  '@hookform/resolvers@5.4.2(@standard-schema/spec@1.1.0)(ajv-formats@2.1.1(ajv@8.20.0))(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(valibot@1.4.2(typescript@6.0.3))(zod@4.4.3)':
+  '@hookform/resolvers@5.5.1(@standard-schema/spec@1.1.0)(ajv-formats@2.1.1(ajv@8.20.0))(ajv@8.20.0)(react-hook-form@7.83.0(react@19.2.8))(valibot@1.4.2(typescript@6.0.3))(zod@4.4.3)':
     dependencies:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.83.0(react@19.2.8)
@@ -8096,7 +8096,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@1.26.0(react@19.2.8):
+  lucide-react@1.27.0(react@19.2.8):
     dependencies:
       react: 19.2.8
 
@@ -8764,7 +8764,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn@4.14.1(supports-color@10.2.2)(typescript@6.0.3):
+  shadcn@4.15.0(supports-color@10.2.2)(typescript@6.0.3):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/parser': 7.29.7
